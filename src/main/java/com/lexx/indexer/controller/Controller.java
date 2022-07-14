@@ -6,12 +6,16 @@ import java.util.Date;
 
 
 @RestController
-@RequestMapping("/status")
+@RequestMapping("/")
 public class Controller {
 
+    @GetMapping("/status")
+    public String status() {
+        return "Indexer Service Status : Running";
+    }
     @GetMapping("/{id}")
-    public String status(@PathVariable int id) {
-        return "its responding" + new Date();
+    public String getById(@PathVariable int id) {
+        return "id =" + id;
     }
 }
 

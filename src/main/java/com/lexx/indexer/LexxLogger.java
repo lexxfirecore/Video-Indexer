@@ -1,12 +1,14 @@
 package com.lexx.indexer;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
 public class LexxLogger {
 
 
-    void print(String text){
+
+    void print(String text) {
 
         String textWithAsterisks = "***  " + text + "  ***";
         int length = textWithAsterisks.length();
